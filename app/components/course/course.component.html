@@ -1,0 +1,32 @@
+<!-- <p>course works!</p> -->
+ <div style="border-radius: 5px;padding: 10px;border: 1px solid #d9d9d9e0;margin: 10px;">
+<div *ngFor="let item of keys">
+
+
+    <h4 class="headersty" *ngIf="item === 'Credits'">{{[item]}} : ({{len}})</h4>
+    <h4 class="headersty" *ngIf="item != 'Credits'">{{[item]}}</h4>
+    
+    <div *ngIf="item === 'Credits' ">
+        <ul style="list-style-type: none;">
+            <li *ngFor="let key of getKeys(cJson[item])">
+                <label>{{ key }} -</label> <span style="font-weight: 500;"> {{ cJson[item][key] }}</span>
+              </li>
+        </ul>
+    </div> 
+
+    <div *ngIf="item == 'Course Outcomes' " style="display: grid;
+  grid-template-columns: auto auto auto;margin-left:5px;">
+        <button *ngFor="let outcome of cJson[item]" 
+        style="margin-top: 5px;height: 31px;width: 65px;border: none;outline: none;border-radius: 5px;background: #a7c88f;color: black;">{{ outcome | uppercase}}</button>
+    </div>
+    <div *ngIf="item == 'Mapped to this Course' " style="display: grid;
+  grid-template-columns: auto auto auto;margin-left:5px;">
+        <button *ngFor="let map of cJson[item]"
+        style="margin-top: 5px;height: 31px;width: 65px;border: none;outline: none;border-radius: 5px;
+background: #2e6995;
+color: white;">{{ map | uppercase}}</button>
+    </div>
+    <div class="fontstyle" *ngIf="item != 'Credits' && item !='Course Outcomes'  && item != 'Mapped to this Course' ">{{cJson[item]}}</div>
+    <mat-divider style="color:grays;border:1px solid rgb(207, 204, 204)"></mat-divider>
+</div>
+</div>

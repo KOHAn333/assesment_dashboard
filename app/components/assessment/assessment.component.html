@@ -1,0 +1,58 @@
+
+<div style=" display: flex;gap: 10px;">
+<div style="display: flex;margin-top: 2%;align-items: center;gap: 10px;background: #d6d9dd;height: 37px;border-radius: 5px;padding: 5px;">
+  <div style="
+  font-size: 13px;
+">Total Students</div>
+  <div style="
+  font-size: 15px;
+  font-weight: 700;
+">102</div>
+</div>
+
+<div style="display: flex;margin-top: 2%;align-items: center;gap: 10px;background: #d6d9dd;height: 37px;border-radius: 5px;padding: 5px;">
+  <div style="
+  font-size: 13px;
+">Course Average Mark</div>
+  <div style="
+  font-size: 15px;
+  font-weight: 700;
+">85%</div>
+</div>
+</div>
+<h4 style="
+font-size: 14px;
+font-weight: 600;
+margin-top: 1%;
+">Assessment Progress</h4>
+<div id="chart" style="
+border: 1px solid #d8d8d8;
+border-radius: 5px;
+">
+<div style="display: flex;gap:20px;text-align: center;justify-content: center;margin-top: 15px;">
+
+  <div style="display: flex;
+  gap: 8px;
+  align-items: baseline;">
+    <div class="sq-completed"></div>
+    <h6>Pending</h6>
+  </div>
+  <div style="display: flex;
+  gap: 8px;
+  align-items: baseline;">
+    <div class="sq-pending"></div>
+    <h6>Completed</h6>
+  </div>
+
+</div>
+    <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [dataLabels]="chartOptions.dataLabels"
+    [plotOptions]="chartOptions.plotOptions"
+    [xaxis]="chartOptions.xaxis"
+    [stroke]="chartOptions.stroke"
+    [legend]="chartOptions.legend"
+    [fill]="chartOptions.fill"
+  ></apx-chart>
+</div> 

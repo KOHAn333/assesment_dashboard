@@ -1,0 +1,10 @@
+.sq-completed{
+    height: 10px;
+    width: 30px;
+    background-color: #c7c7c7;
+}
+.sq-pending{
+    height: 10px;
+    width: 30px;
+    background-color: #a7c88f;
+} 
